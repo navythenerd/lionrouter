@@ -119,7 +119,7 @@ mainRouter := lionrouter.New()
 staticRouter := lionrouter.New()
 
 staticRouter.Get("/*file", staticHandler())
-mainRouter.Router("/static", staticRouter)
+mainRouter.Route("/static", staticRouter)
 ```
 
 **Path to sub-routers doesn't support named paths or keys at this moment**
