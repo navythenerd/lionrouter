@@ -129,12 +129,12 @@ mainRouter.Router("/static", staticRouter)
 To assign any given middleware of the type `func(http.Handler) http.Handler`, just use the `Middleware(...func(http.Handler) Handler)` method.
 
 ```
-router.Middleware(someMiddleware)
-router.Middleware(otherMiddleware)
+router.Use(someMiddleware)
+router.Use(otherMiddleware)
 ```
 this adds `someMiddleware` and `otherMiddleware`. You can also define the middleware at once.
 ```
-router.Middleware(someMiddleware, otherMiddleware)
+router.Use(someMiddleware, otherMiddleware)
 ```
 
 # License
